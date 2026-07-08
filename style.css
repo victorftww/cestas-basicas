@@ -182,8 +182,8 @@ h1 {
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.55;
-  max-width: 31ch;
-  min-height: 3.2em;
+  max-width: 37ch;
+  min-height: 4.8em;
 }
 .basket-card p {
   margin: 10px 0 0;
@@ -245,8 +245,10 @@ h1 {
 .photo-grid .main-photo {
   grid-column: 1 / -1;
   height: 330px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
+  background: #faf7f1;
+  padding: 6px;
 }
 .photo-grid .detail-photo {
   height: 215px;
@@ -256,8 +258,9 @@ h1 {
   padding: 4px;
 }
 .photo-grid .landscape-photo {
-  object-fit: cover;
-  padding: 0;
+  object-fit: contain;
+  padding: 4px;
+  background: #faf7f1;
 }
 .photo-grid .detail-cleaning {
   object-position: center top;
@@ -323,8 +326,9 @@ h1 {
   display: block;
   margin-top: 5px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
+  line-height: 1.25;
 }
 .premium-purchase .purchase-item.highlight small,
 .premium-purchase .purchase-item.highlight span {
