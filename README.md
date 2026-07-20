@@ -1,4 +1,4 @@
-NFPS Cestas - Projeto local (v14)
+NFPS Cestas - Projeto local (v16)
 
 Como usar:
 1. Extraia a pasta/ZIP.
@@ -6,11 +6,6 @@ Como usar:
 3. O site funciona localmente, sem instalação.
 
 Ajustes desta versão:
-- Adicionada informação de atendimento em Patrocínio-MG no topo/início do site.
-- Cesta Essencial informa que é ideal para durar o mês para até 2 pessoas.
-- Cesta Premium informa que é ideal para o mês de famílias com mais pessoas em casa.
-- Fotos ajustadas para aparecerem por inteiro, sem cortes.
-- Pagamento no cartão atualizado: até 2x sem juros; mais parcelas com juros da maquininha.
-
-Atualização v15:
-- Removidas as frases descritivas abaixo de “Opção econômica” e “Opção completa”.
+- Adicionado o texto solicitado abaixo de “Opção econômica”.
+- Adicionado o texto solicitado abaixo de “Opção completa”.
+- Mantida a estrutura atual do site para atualizar no GitHub/Vercel.

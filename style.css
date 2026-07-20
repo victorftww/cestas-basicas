@@ -182,8 +182,8 @@ h1 {
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.55;
-  max-width: 37ch;
-  min-height: 4.8em;
+  max-width: 46ch;
+  min-height: 8.4em;
 }
 .basket-card p {
   margin: 10px 0 0;
