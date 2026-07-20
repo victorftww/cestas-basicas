@@ -11,3 +11,6 @@ Ajustes desta versão:
 - Cesta Premium informa que é ideal para o mês de famílias com mais pessoas em casa.
 - Fotos ajustadas para aparecerem por inteiro, sem cortes.
 - Pagamento no cartão atualizado: até 2x sem juros; mais parcelas com juros da maquininha.
+
+Atualização v15:
+- Removidas as frases descritivas abaixo de “Opção econômica” e “Opção completa”.
