@@ -153,6 +153,57 @@ h1 {
   background: linear-gradient(180deg, #ffffff, #f4fbf7);
   border-color: rgba(20, 84, 71, 0.22);
 }
+.featured-card {
+  position: relative;
+  border: 2px solid rgba(216, 151, 50, 0.72);
+  box-shadow: 0 24px 70px rgba(20, 84, 71, 0.16), 0 0 0 6px rgba(216, 151, 50, 0.10);
+}
+.featured-heading::after {
+  width: 116px;
+  background: linear-gradient(90deg, var(--gold), #f7d48b, var(--gold));
+}
+.popular-ribbon {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #d89732, #a96b12);
+  box-shadow: 0 14px 30px rgba(169, 107, 18, 0.28);
+  font-size: 0.92rem;
+  line-height: 1;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+.premium-callout {
+  display: grid;
+  gap: 5px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff7df, #eaf7ef);
+  border: 1px solid rgba(216, 151, 50, 0.28);
+}
+.premium-callout strong {
+  color: var(--green-dark);
+  font-size: 1.15rem;
+  font-weight: 950;
+}
+.premium-callout span {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  font-weight: 700;
+}
 .card-title-row {
   display: grid;
   gap: 12px;
@@ -242,6 +293,28 @@ h1 {
   border-radius: 18px;
   border: 1px solid var(--line);
 }
+.photo-grid img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.photo-grid img:hover,
+.photo-grid img:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(216, 151, 50, 0.65);
+  box-shadow: 0 16px 34px rgba(20, 84, 71, 0.14);
+  outline: none;
+}
+.photo-grid::after {
+  content: "Clique nas imagens para ampliar";
+  grid-column: 1 / -1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
 .photo-grid .main-photo {
   grid-column: 1 / -1;
   height: 330px;
@@ -267,6 +340,10 @@ h1 {
 }
 .photo-grid .detail-food {
   object-position: center center;
+}
+.photo-grid .full-span {
+  grid-column: 1 / -1;
+  height: 260px;
 }
 
 .purchase-box {
@@ -410,6 +487,95 @@ h1 {
 .premium-button { background: var(--green-dark); }
 .premium-button:hover { background: #092f28; }
 
+
+.loyalty-section {
+  margin-top: 34px;
+}
+.loyalty-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 26px;
+  align-items: center;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(216,151,50,0.20), transparent 34%),
+    linear-gradient(135deg, #fffaf2, #f5fbf7);
+  border: 1px solid rgba(216, 151, 50, 0.24);
+  box-shadow: var(--shadow);
+}
+.loyalty-copy {
+  display: grid;
+  gap: 12px;
+}
+.loyalty-kicker {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: #81540d;
+  background: var(--gold-soft);
+  font-size: 0.86rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.loyalty-copy h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+}
+.loyalty-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.55;
+  font-weight: 700;
+}
+.loyalty-copy small {
+  display: block;
+  margin-top: 4px;
+  color: #806a48;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+.loyalty-figure {
+  margin: 0;
+}
+.loyalty-image {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+  border-radius: 24px;
+  border: 1px solid rgba(20,84,71,0.12);
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(20, 84, 71, 0.14);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.loyalty-image:hover,
+.loyalty-image:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(216, 151, 50, 0.65);
+  box-shadow: 0 22px 50px rgba(20, 84, 71, 0.18);
+  outline: none;
+}
+.loyalty-figure figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.94rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
 .notice {
   display: flex;
   gap: 10px;
@@ -500,3 +666,306 @@ h1 {
 }
 
 .purchase-item.gift strong { font-size: 1.32rem; color: var(--green-dark); }
+
+/* Ajustes da versão com 5 opções de cestas */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.quick-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 15px;
+  border-radius: 999px;
+  background: #fffaf2;
+  border: 1px solid var(--line);
+  color: var(--green-dark);
+  font-size: 0.94rem;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(24, 33, 29, 0.06);
+}
+.quick-links a:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.basket-description {
+  min-height: 6.8em;
+}
+
+.basket-card.diamond {
+  background: linear-gradient(180deg, #ffffff, #fff8e8);
+  border-color: rgba(216, 151, 50, 0.24);
+}
+.basket-card.clean {
+  background: linear-gradient(180deg, #ffffff, #f1fbff);
+  border-color: rgba(20, 84, 71, 0.16);
+}
+.basket-card.sweet {
+  background: linear-gradient(180deg, #ffffff, #fff2f7);
+  border-color: rgba(216, 151, 50, 0.18);
+}
+
+.label.gold {
+  background: var(--gold-soft);
+  color: #81540d;
+}
+.label.clean-label {
+  background: #e7f6fb;
+  color: #135166;
+}
+.label.sweet-label {
+  background: #ffe8f0;
+  color: #8b314d;
+}
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 260px;
+  margin-top: 22px;
+  padding: 28px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top left, rgba(216,151,50,0.18), transparent 34%),
+    linear-gradient(135deg, #fffaf2, #f7f1e7);
+  border: 1px dashed rgba(20, 84, 71, 0.24);
+  text-align: center;
+}
+.photo-placeholder span {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.photo-placeholder strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+.photo-placeholder small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.purchase-item.note {
+  grid-column: 1 / -1;
+  background: #fffaf2;
+  border-color: rgba(216, 151, 50, 0.22);
+}
+.purchase-item.note strong {
+  margin-top: 6px;
+  color: #59645f;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.items-area.single {
+  grid-template-columns: 1fr;
+}
+.items-box ul.two-columns {
+  columns: 2;
+  column-gap: 24px;
+}
+.items-box ul.two-columns li {
+  break-inside: avoid;
+}
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  background: rgba(4, 20, 17, 0.86);
+  backdrop-filter: blur(8px);
+}
+.image-lightbox.active {
+  display: flex;
+  flex-direction: column;
+}
+.lightbox-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  max-width: min(1120px, 94vw);
+  max-height: 82vh;
+}
+.image-lightbox img {
+  display: block;
+  max-width: min(1120px, 94vw);
+  max-height: 82vh;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 24px;
+  background: #fffaf2;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 54px;
+  height: 54px;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 999px;
+  color: var(--green-dark);
+  background: rgba(255, 250, 242, 0.92);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+  cursor: pointer;
+  font-size: 2.7rem;
+  line-height: 0.85;
+  font-weight: 900;
+}
+.lightbox-prev {
+  left: 14px;
+}
+.lightbox-next {
+  right: 14px;
+}
+.lightbox-arrow:hover,
+.lightbox-arrow:focus-visible {
+  outline: 3px solid rgba(216, 151, 50, 0.65);
+  background: #fffaf2;
+}
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--green-dark);
+  background: #fffaf2;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  outline: 3px solid rgba(216, 151, 50, 0.65);
+}
+#lightboxCaption {
+  max-width: min(920px, 92vw);
+  margin: 14px auto 0;
+  color: #fff;
+  text-align: center;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+@media (min-width: 981px) {
+  .products .model-column:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(760px, 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .quick-links {
+    gap: 8px;
+  }
+  .quick-links a {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.86rem;
+  }
+  .basket-description {
+    min-height: 0;
+  }
+  .photo-placeholder {
+    min-height: 210px;
+  }
+  .items-box ul.two-columns {
+    columns: 1;
+  }
+}
+
+/* Fotos reais da Cesta Diamante */
+.diamante-photos .wide-photo {
+  grid-column: 1 / -1;
+  height: 260px;
+  object-fit: contain;
+  object-position: center center;
+  background: #faf7f1;
+  padding: 6px;
+}
+
+@media (max-width: 640px) {
+  .diamante-photos .wide-photo {
+    height: 210px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .popular-ribbon {
+    top: -15px;
+    font-size: 0.78rem;
+    padding: 9px 13px;
+    letter-spacing: 0.05em;
+  }
+  .premium-callout {
+    padding: 14px;
+  }
+  .image-lightbox {
+    padding: 16px;
+  }
+  .image-lightbox img {
+    max-height: 76vh;
+    border-radius: 18px;
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .lightbox-arrow { width: 44px; height: 44px; font-size: 2.25rem; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
+
+
+@media (max-width: 900px) {
+  .loyalty-card {
+    grid-template-columns: 1fr;
+  }
+  .loyalty-copy {
+    text-align: center;
+    justify-items: center;
+  }
+  .loyalty-image {
+    max-height: none;
+  }
+}
+
